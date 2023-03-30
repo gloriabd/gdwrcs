@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>검단우리 주일학교</title>
+</head>
+<body>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poor+Story&display=swap');
+        body {
+            background-image: url(https://ifh.cc/g/zxAcX6.jpg);
+            background-size: cover;
+            
+        }
+
+        .listInner {
+            padding-top: 10px;
+            display: none;
+            text-align: center;
+        }
+
+        input {
+            border-radius: 29px;
+            padding: 10px 50px;
+            border: white;
+            border-width: 10px;
+            text-align: center;
+            text-decoration: none;
+            box-shadow: 0px 0px 2px 0px black;
+        }
+
+        #search_html {
+          width: 30rem;
+          height: 100vw;
+          position: absolute;
+          right: 4.1rem;
+          top: 0;
+          opacity: 0;
+          transition: all 0.4s;
+        }
+
+        span > a {
+            text-decoration: none;
+            color: black;
+            font-family: 'Poor Story';
+            font-size: medium;
+            padding: 5px 7px;
+        }
+
+        span > a:hover {
+          transition: all 0.1s;
+          font-size: large;
+        }
+
+        .searchbox {
+            padding-top: 8rem;
+            text-align: center;
+        }
+
+        .cbs-bible-story {
+            font-size: 20px;
+            font-weight: bold;
+            text-align: center;
+            font-family: 'Poor Story';
+        }
+
+        body {
+            overflow: hidden;
+        }
+
+        ::-webkit-scrollbar {
+            display: none;
+        }
+
+        .jacob {
+            margin-top: 15rem;
+            margin-left: 10rem;
+            text-decoration: none;
+            color: black;
+            font-family: 'Poor Story';
+            font-size: 40px;
+            font-weight: bolder;
+            position: absolute;
+            padding: 8px 12px;
+            animation: moving 1.75s infinite;
+        }
+
+        .jacob:hover{
+            font-size: 41px;
+        }
+
+        .bible {
+            margin-top: 40rem;
+            margin-left: 15rem;
+            text-decoration: none;
+            color: black;
+            font-family: 'Poor Story';
+            font-size: 40px;
+            font-weight: bolder;
+            position: absolute;
+            animation: moving 2s infinite;
+        }
+
+        .bible:hover{
+            font-size: 41px;
+        }
+
+        .cbs {
+            margin-top: 5.2rem;
+            margin-left: 70rem;
+            text-decoration: none;
+            color: black;
+            font-family: 'Poor Story';
+            font-size: 40px;
+            font-weight: bolder;
+            position: absolute;
+            z-index: 1;
+            animation: moving 2.25s infinite;
+        }
+
+        .cbs:hover{
+            font-size: 41px;
+        }
+
+        .offer {
+            margin-top: 37rem;
+            margin-left: 50rem;
+            text-decoration: none;
+            color: black;
+            font-family: 'Poor Story';
+            font-size: 40px;
+            font-weight: bolder;
+            position: absolute;
+            animation: moving 1.5s infinite;
+        }
+
+        .offer:hover{
+            font-size: 41px;
+        }
+
+        @keyframes moving {
+            0% {
+                padding-left: 0px;
+            }
+
+            49% {
+                padding-left: 0px;
+            }
+
+            50% {
+                padding-left: 2px;
+            }
+
+            99% {
+                padding-left: 2px;
+            }
+
+            100% {
+                padding-left: 0px;
+            }
+        }
+    </style>
+    <script>
+        function filter() {
+          let search = document.getElementById("search").value.toLowerCase();
+          let listInner = document.getElementsByClassName("listInner");
+  
+          for (let i = 0; i < listInner.length; i++) {
+            cbslist = listInner[i].getElementsByClassName("cbslist");
+            if (cbslist[0].innerHTML.toLowerCase().indexOf(search) != -1 
+            ) {
+              listInner[i].style.display = "block"
+            } else {
+              listInner[i].style.display = ""
+            }
+          }
+        }
+
+      </script>
+    <a class="cbs" href="#" type="button" onclick="onDisplay()">CBS 성경동화</a>
+    <a class="bible" href="https://youtu.be/wftKGN5ELHo" target="_blank" onclick="offDisplay()">성경목록가</a>
+    <a class="jacob" href="https://youtu.be/1_S7MMVceP0" target="_blank" onclick="offDisplay()">야곱의 축복 율동</a>
+    <a class="offer" href="https://youtu.be/uII42S3S-xc" target="_blank" onclick="offDisplay()">봉헌찬양</a>
+
+    <script>
+        function onDisplay() {
+            document.getElementById('search_html').style.opacity='1';
+        }
+
+        function offDisplay() {
+            document.getElementById('search_html').style.opacity='0';
+        }
+    </script>
+
+
+
+
+    <nav id="search_html">
+        <div class="searchbox">
+            <a class="cbs-bible-story"><br></a>
+            <label><input type="text" id="search" onkeyup="filter()" placeholder="몇 화를 찾으세요?" /></label>
+        </div>
+    
+        <div class="listBox">
+    
+           
+    
+    
+            <div class="listInner">
+              <span class="cbslist"><a href="https://youtu.be/w6iGwxLMFn8" target="_blank" type="button" onclick="offDisplay()">CBS성경동화 1편 - 세상을 만드신 하나님, 천지창조, 아담과 하와</a></span>
+            </div>
+            <div class="listInner">
+                <span class="cbslist"><a href="https://youtu.be/sGGPgpOCoiM" target="_blank" type="button" onclick="offDisplay()">CBS성경동화 2편 - 선악과를 먹은 아담과 하와</a></span>
+              </div>
+              <div class="listInner">
+                <span class="cbslist"><a href="https://youtu.be/uA4N4fuCaxw" target="_blank" type="button" onclick="offDisplay()">CBS성경동화 3편 - 아벨을 죽인 가인</a></span>
+              </div>
+              <div class="listInner">
+                <span class="cbslist"><a href="https://youtu.be/0IroRfBkUPo" target="_blank" type="button" onclick="offDisplay()">CBS성경동화 4편 - 커다란 배를 만든 노아</a></span>
+              </div>
+              <div class="listInner">
+                <span class="cbslist"><a href="https://youtu.be/0IroRfBkUPo" target="_blank" type="button" onclick="offDisplay()">CBS성경동화 5편 - 하나님과 아브라함의 특별한 약속</a></span>
+              </div>
+              <div class="listInner">
+                <span class="cbslist"><a href="https://youtu.be/-tWjrdhUFkQ" target="_blank" type="button" onclick="offDisplay()">CBS성경동화 6편 - 하늘 꼭대기까지 쌓은 탑, 바벨탑</a></span>
+              </div>
+              <div class="listInner">
+                <span class="cbslist"><a href="https://youtu.be/ub6U4C0Q7u8" target="_blank" type="button" onclick="offDisplay()">CBS성경동화 7편 - 이삭을 바친 아브라함</a></span>
+              </div>
+              <div class="listInner">
+                <span class="cbslist"><a href="https://youtu.be/oU0LESVYMDg" target="_blank" type="button" onclick="offDisplay()">CBS성경동화 8편 - 리브가와 결혼한 이삭</a></span>
+              </div>
+              <div class="listInner">
+                <span class="cbslist"><a href="https://youtu.be/5AM_4mvAfsk" target="_blank" type="button" onclick="offDisplay()">CBS성경동화 9편 - 맏아들의 권리, 에서와 야곱</a></span>
+              </div>
+              <div class="listInner">
+                <span class="cbslist"><a href="https://youtu.be/9dYLQiQAVfo" target="_blank" type="button" onclick="offDisplay()">CBS성경동화 10편 - 야곱을 지켜주신 하나님</a></span>
+              </div>
+              <div class="listInner">
+                <span class="cbslist"><a href="https://youtu.be/9dYLQiQAVfo" target="_blank" type="button" onclick="offDisplay()">CBS성경동화 11편 - 형들에게 버림받은 요셉</a></span>
+              </div>
+              <div class="listInner">
+                <span class="cbslist"><a href="https://youtu.be/kcNPE7268mY" target="_blank" type="button" onclick="offDisplay()">CBS성경동화 12편 - 요셉의 꿈풀이</a></span>
+              </div>
+              <div class="listInner">
+                <span class="cbslist"><a href="https://youtu.be/wORHXXl5h5k" target="_blank" type="button" onclick="offDisplay()">CBS성경동화 13편 - 이집트의 총리가 된 요셉</a></span>
+              </div>
+              <div class="listInner">
+                <span class="cbslist"><a href="https://youtu.be/0dutpSk3owE" target="_blank" type="button" onclick="offDisplay()">CBS성경동화 14편 - 형들을 만난 요셉</a></span>
+              </div>
+              <div class="listInner">
+                <span class="cbslist"><a href="https://youtu.be/IgtDbc0lihA" target="_blank" type="button" onclick="offDisplay()">CBS성경동화 15편 - 정체를 밝힌 요셉</a></span>
+              </div>
+              <div class="listInner">
+                <span class="cbslist"><a href="https://youtu.be/qwh2ZcZtwt8" target="_blank" type="button" onclick="offDisplay()">CBS성경동화 16편 - 하나님을 사랑한 욥</a></span>
+              </div>
+              <div class="listInner">
+                <span class="cbslist"><a href="https://youtu.be/GtVx8QVV4Lg" target="_blank" type="button" onclick="offDisplay()">CBS성경동화 17편 - 바구니에 떠내려 온 아기</a></span>
+              </div>
+              <div class="listInner">
+                <span class="cbslist"><a href="https://youtu.be/gKBgdqh1Uo4" target="_blank" type="button" onclick="offDisplay()">CBS성경동화 18편 - 불타는 떨기나무, 모세</a></span>
+              </div>
+              <div class="listInner">
+                <span class="cbslist"><a href="https://youtu.be/j3r8FLZgklc" target="_blank" type="button" onclick="offDisplay()">CBS성경동화 19편 - 파라오를 찾아간 모세</a></span>
+              </div>
+              <div class="listInner">
+                <span class="cbslist"><a href="https://youtu.be/j3r8FLZgklc" target="_blank" type="button" onclick="offDisplay()">CBS성경동화 20편 - 이집트에 내린 열가지 재앙</a></span>
+              </div>
+              <div class="listInner">
+                <span class="cbslist"><a href="https://youtu.be/hualvFaNK-o" target="_blank" type="button" onclick="offDisplay()">CBS성경동화 21편 - 여린양의 피와 유월절</a></span>
+              </div>
+              <div class="listInner">
+                <span class="cbslist"><a href="https://youtu.be/hualvFaNK-o" target="_blank" type="button" onclick="offDisplay()">CBS성경동화 22편 - 둘로 갈라진 바닷물, 모세의 기적</a></span>
+              </div>
+              <div class="listInner">
+                <span class="cbslist"><a href="https://youtu.be/fmDRni9ijNE" target="_blank" type="button" onclick="offDisplay()">CBS성경동화 23편 - 마라의 쓴 물 그리고 만나와 메추라기</a></span>
+              </div>
+              <div class="listInner">
+                <span class="cbslist"><a href="https://youtu.be/fmDRni9ijNE" target="_blank" type="button" onclick="offDisplay()">CBS성경동화 24편 - 하나님의 열가지 약속, 십계명</a></span>
+              </div>
+              <div class="listInner">
+                <span class="cbslist"><a href="https://youtu.be/PQ7Sl12MAiE" target="_blank" type="button" onclick="offDisplay()">CBS성경동화 25편 - 금송아지를 만든 이스라엘 사람들</a></span>
+              </div>
+              <div class="listInner">
+                <span class="cbslist"><a href="https://youtu.be/5Cl6s3it-HE" target="_blank" type="button" onclick="offDisplay()">CBS성경동화 26편 - 성막짓기</a></span>
+              </div>
+              <div class="listInner">
+                <span class="cbslist"><a href="https://youtu.be/PxmWLRT-LUU" target="_blank" type="button" onclick="offDisplay()">CBS성경동화 27편 - 열두 명의 정탐꾼</a></span>
+              </div>
+              <div class="listInner">
+                <span class="cbslist"><a href="https://youtu.be/I_FRxtjMjAU" target="_blank" type="button" onclick="offDisplay()">CBS성경동화 28편 - 모세와 아론을 미워하는 이스라엘 백성들</a></span>
+              </div>
+              <div class="listInner">
+                <span class="cbslist"><a href="https://youtu.be/SajwN9FB-p4" target="_blank" type="button" onclick="offDisplay()">CBS성경동화 29편 - 모세의 실수</a></span>
+              </div>
+              <div class="listInner">
+                <span class="cbslist"><a href="https://youtu.be/NxVoNT016lA" target="_blank" type="button" onclick="offDisplay()">CBS성경동화 30편 - 발람과 말하는 나귀</a></span>
+              </div>
+              <div class="listInner">
+                <span class="cbslist"><a href="https://youtu.be/Yqc86CBJgx4" target="_blank" type="button" onclick="offDisplay()">CBS성경동화 31편 - 꾀를 부린 발람</a></span>
+              </div>
+              <div class="listInner">
+                <span class="cbslist"><a href="https://youtu.be/5YHrzTeeW2Q" target="_blank" type="button" onclick="offDisplay()">CBS성경동화 32편 - 정탐꾼을 도운 라합</a></span>
+              </div>
+              <div class="listInner">
+                <span class="cbslist"><a href="https://youtu.be/7snxGDKXbwo" target="_blank" type="button" onclick="offDisplay()">CBS성경동화 33편 - 믿음으로 무너진 여리고성</a></span>
+              </div>
+              <div class="listInner">
+                <span class="cbslist"><a href="https://youtu.be/KzMHW_cAM0M" target="_blank" type="button" onclick="offDisplay()">CBS성경동화 34편 - 도둑질을 한 아간</a></span>
+              </div>
+              <div class="listInner">
+                <span class="cbslist"><a href="https://youtu.be/d0Ch8-gcebI" target="_blank" type="button" onclick="offDisplay()">CBS성경동화 35편 - 해와 달이 멈추다</a></span>
+              </div>
+              <div class="listInner">
+                <span class="cbslist"><a href="https://youtu.be/MhdH10wdhjU" target="_blank" type="button" onclick="offDisplay()">CBS성경동화 36편 - 사사 에훗</a></span>
+              </div>
+              <div class="listInner">
+                <span class="cbslist"><a href="https://youtu.be/kOARaDs7aY0" target="_blank" type="button" onclick="offDisplay()">CBS성경동화 37편 - 사사 드보라</a></span>
+              </div>
+              <div class="listInner">
+                <span class="cbslist"><a href="https://youtu.be/DQhac5d0fxA" target="_blank" type="button" onclick="offDisplay()">CBS성경동화 38편 - 우상을 부숴버린 기드온</a></span>
+              </div>
+              <div class="listInner">
+                <span class="cbslist"><a href="https://youtu.be/4Nsx-bmoTC0" target="_blank" type="button" onclick="offDisplay()">CBS성경동화 39편 - 기드온과 300명의 용사들</a></span>
+              </div>
+              <div class="listInner">
+                <span class="cbslist"><a href="https://youtu.be/8QSRTbJHvpg" target="_blank" type="button" onclick="offDisplay()">CBS성경동화 40편 - 아비멜렉과 요담</a></span>
+              </div>
+              <div class="listInner">
+                <span class="cbslist"><a href="https://youtu.be/8QSRTbJHvpg" target="_blank" type="button" onclick="offDisplay()">CBS성경동화 41편 - 어리석은 약속을 한 입다</a></span>
+              </div>
+              <div class="listInner">
+                <span class="cbslist"><a href="https://youtu.be/JCzsVJCzVRY" target="_blank" type="button" onclick="offDisplay()">CBS성경동화 42편 - 삼손이 낸 수수께끼</a></span>
+              </div>
+              <div class="listInner">
+                <span class="cbslist"><a href="https://youtu.be/eoWKvBDwLMs" target="_blank" type="button" onclick="offDisplay()">CBS성경동화 43편 - 블레셋을 화나게 한 삼손</a></span>
+              </div>
+              <div class="listInner">
+                <span class="cbslist"><a href="https://youtu.be/q9fgdagONac" target="_blank" type="button" onclick="offDisplay()">CBS성경동화 44편 - 놀라운 힘을 발휘한 삼손</a></span>
+              </div>
+              <div class="listInner">
+                <span class="cbslist"><a href="https://youtu.be/UyeQhaJxvbI" target="_blank" type="button" onclick="offDisplay()">CBS성경동화 45편 - 나오미와 룻</a></span>
+              </div>
+              <div class="listInner">
+                <span class="cbslist"><a href="https://youtu.be/McHSpPA2FoI" target="_blank" type="button" onclick="offDisplay()">CBS성경동화 46편 - 룻과 결혼한 보아스</a></span>
+              </div>
+              <div class="listInner">
+                <span class="cbslist"><a href="https://youtu.be/McHSpPA2FoI" target="_blank" type="button" onclick="offDisplay()">CBS성경동화 47편 - 사무엘을 부르는 하나님</a></span>
+              </div>
+              <div class="listInner">
+                <span class="cbslist"><a href="https://youtu.be/AhVBMlaGR2Y" target="_blank" type="button" onclick="offDisplay()">CBS성경동화 48편 - 언약궤를 빼앗긴 이스라엘</a></span>
+              </div>
+              <div class="listInner">
+                <span class="cbslist"><a href="https://youtu.be/oK0HbH3l_Uw" target="_blank" type="button" onclick="offDisplay()">CBS성경동화 49편 - 언약궤가 있어야 할 곳</a></span>
+              </div>
+              <div class="listInner">
+                <span class="cbslist"><a href="https://youtu.be/VYfHZw2XAfE" target="_blank" type="button" onclick="offDisplay()">CBS성경동화 50편 - 사무엘을 만난 사울</a></span>
+              </div>
+              <div class="listInner">
+                <span class="cbslist"><a href="https://youtu.be/GX8tfvhmaY8" target="_blank" type="button" onclick="offDisplay()">CBS성경동화 51편 - 왕이 된 사울</a></span>
+              </div>
+              <div class="listInner">
+                <span class="cbslist"><a href="https://youtu.be/VwPQkRu1sdI" target="_blank" type="button" onclick="offDisplay()">CBS성경동화 52편 - 용감한 왕자 요나단</a></span>
+              </div>
+              <div class="listInner">
+                <span class="cbslist"><a href="https://youtu.be/36rnk6ND7jY" target="_blank" type="button" onclick="offDisplay()">CBS성경동화 53편 - 새 왕을 만나러 간 사무엘</a></span>
+              </div>
+              <div class="listInner">
+                <span class="cbslist"><a href="https://youtu.be/aFiXkyPYV1c" target="_blank" type="button" onclick="offDisplay()">CBS성경동화 54편 - 사울을 위해 연주한 다윗</a></span>
+              </div>
+              <div class="listInner">
+                <span class="cbslist"><a href="https://youtu.be/6zmdP598SMg" target="_blank" type="button" onclick="offDisplay()">CBS성경동화 55편 - 골리앗에 맞선 다윗</a></span>
+              </div>
+              <div class="listInner">
+                <span class="cbslist"><a href="https://youtu.be/8bmy_7Yl9AU" target="_blank" type="button" onclick="offDisplay()">CBS성경동화 56편 - 다윗을 질투하는 사울</a></span>
+              </div>
+              <div class="listInner">
+                <span class="cbslist"><a href="https://youtu.be/f6m9As-jTVc" target="_blank" type="button" onclick="offDisplay()">CBS성경동화 57편 - 다윗과 요나단의 눈물</a></span>
+              </div>
+              <div class="listInner">
+                <span class="cbslist"><a href="https://youtu.be/NHWefEZxL_U" target="_blank" type="button" onclick="offDisplay()">CBS성경동화 58편 - 사울을 살려준 다윗</a></span>
+              </div>
+              <div class="listInner">
+                <span class="cbslist"><a href="https://youtu.be/N0N_U3BWDw4" target="_blank" type="button" onclick="offDisplay()">CBS성경동화 59편 - 이스라엘 왕이 된 다윗</a></span>
+              </div>
+              <div class="listInner">
+                <span class="cbslist"><a href="https://youtu.be/8HW_xP9dPSY" target="_blank" type="button" onclick="offDisplay()">CBS성경동화 60편 - 다윗을 속인 압살롬</a></span>
+              </div>
+              <div class="listInner">
+                <span class="cbslist"><a href="https://youtu.be/RRIwBPnvGGg" target="_blank" type="button" onclick="offDisplay()">CBS성경동화 61편 - 다윗의 뒤를 이은 솔로몬</a></span>
+              </div>
+              <div class="listInner">
+                <span class="cbslist"><a href="https://youtu.be/Z6A_RKCc6T0" target="_blank" type="button" onclick="offDisplay()">CBS성경동화 62편 - 지혜의왕 솔로몬</a></span>
+              </div>
+              <div class="listInner">
+                <span class="cbslist"><a href="https://youtu.be/VkwBoPzfGAY" target="_blank" type="button" onclick="offDisplay()">CBS성경동화 63편 - 둘로 갈라진 이스라엘</a></span>
+              </div>
+              <div class="listInner">
+                <span class="cbslist"><a href="https://youtu.be/2dLcKa6wAb8" target="_blank" type="button" onclick="offDisplay()">CBS성경동화 64편 - 우상을 섬긴 두 왕국</a></span>
+              </div>
+              <div class="listInner">
+                <span class="cbslist"><a href="https://youtu.be/EhOPCE8oD_M" target="_blank" type="button" onclick="offDisplay()">CBS성경동화 65편 - 아합왕과 엘리야 선지자</a></span>
+              </div>
+              <div class="listInner">
+                <span class="cbslist"><a href="https://youtu.be/1e6XyA0Jiaw" target="_blank" type="button" onclick="offDisplay()">CBS성경동화 66편 - 엘리야와 바알의 선지자들</a></span>
+              </div>
+              <div class="listInner">
+                <span class="cbslist"><a href="https://youtu.be/F2qp11VNps8" target="_blank" type="button" onclick="offDisplay()">CBS성경동화 67편 - 나봇의 포도발</a></span>
+              </div>
+              <div class="listInner">
+                <span class="cbslist"><a href="https://youtu.be/RKsJ8wj2QtM" target="_blank" type="button" onclick="offDisplay()">CBS성경동화 68편 - 엘리야의 뒤를 이은 엘리사</a></span>
+              </div>
+              <div class="listInner">
+                <span class="cbslist"><a href="https://youtu.be/p_pMqVE4jzk" target="_blank" type="button" onclick="offDisplay()">CBS성경동화 69편 - 엘리사가 보여준 기적들</a></span>
+              </div>
+              <div class="listInner">
+                <span class="cbslist"><a href="https://youtu.be/9hxca1TJjmM" target="_blank" type="button" onclick="offDisplay()">CBS성경동화 70편 - 한센 병에 걸린 나아만 장군</a></span>
+              </div>
+              <div class="listInner">
+                <span class="cbslist"><a href="https://youtu.be/LRrQLvaA4hA" target="_blank" type="button" onclick="offDisplay()">CBS성경동화 71편 - 물고기 뱃속에 들어간 요나</a></span>
+              </div>
+              <div class="listInner">
+                <span class="cbslist"><a href="https://youtu.be/xvJU_rv5X7s" target="_blank" type="button" onclick="offDisplay()">CBS성경동화 72편 - 훌룡한 왕 히스기야</a></span>
+              </div>
+              <div class="listInner">
+                <span class="cbslist"><a href="https://youtu.be/lcEnjezWZmc" target="_blank" type="button" onclick="offDisplay()">CBS성경동화 73편 - 눈물의 선지자 예레미야</a></span>
+              </div>
+              <div class="listInner">
+                <span class="cbslist"><a href="https://youtu.be/jcIwgcJzBDM" target="_blank" type="button" onclick="offDisplay()">CBS성경동화 74편 - 다니엘과 세 친구</a></span>
+              </div>
+              <div class="listInner">
+                <span class="cbslist"><a href="https://youtu.be/NLe6mhHjtbU" target="_blank" type="button" onclick="offDisplay()">CBS성경동화 75편 - 느부갓네살 왕의 꿈</a></span>
+              </div>
+              <div class="listInner">
+                <span class="cbslist"><a href="https://youtu.be/9jgykEnM6S8" target="_blank" type="button" onclick="offDisplay()">CBS성경동화 76편 - 용광로에 들어간 세 친구</a></span>
+              </div>
+              <div class="listInner">
+                <span class="cbslist"><a href="https://youtu.be/TwaY8S4_G3A" target="_blank" type="button" onclick="offDisplay()">CBS성경동화 77편 - 사자굴에 갇힌 다니엘</a></span>
+              </div>
+              <div class="listInner">
+                <span class="cbslist"><a href="https://youtu.be/G0rgsMa32N0" target="_blank" type="button" onclick="offDisplay()">CBS성경동화 78편 - 위험에 처한 에스더 왕비</a></span>
+              </div>
+              <div class="listInner">
+                <span class="cbslist"><a href="https://youtu.be/y71ey8T-amU" target="_blank" type="button" onclick="offDisplay()">CBS성경동화 79편 - 유대인들을 구한 에스더</a></span>
+              </div>
+              <div class="listInner">
+                <span class="cbslist"><a href="https://youtu.be/oM8ihghyHDM" target="_blank" type="button" onclick="offDisplay()">CBS성경동화 80편 - 에스라와 느헤미야</a></span>
+              </div>
+              <div class="listInner">
+                <span class="cbslist"><a href="https://youtu.be/2eaDHeirjEA" target="_blank" type="button" onclick="offDisplay()">CBS성경동화 81편 - 마리아에게 나타난 천사</a></span>
+              </div>
+              <div class="listInner">
+                <span class="cbslist"><a href="https://youtu.be/J-4qoDLbBDk" target="_blank" type="button" onclick="offDisplay()">CBS성경동화 82편 - 예수님의 탄생</a></span>
+              </div>
+              <div class="listInner">
+                <span class="cbslist"><a href="https://youtu.be/hXo_pG7IyHE" target="_blank" type="button" onclick="offDisplay()">CBS성경동화 83편 - 별을 따라간 동방박사들</a></span>
+              </div>
+              <div class="listInner">
+                <span class="cbslist"><a href="https://youtu.be/bSwm1yWvORA" target="_blank" type="button" onclick="offDisplay()">CBS성경동화 84편 - 세례받으신 예수님</a></span>
+              </div>
+              <div class="listInner">
+                <span class="cbslist"><a href="https://youtu.be/-h3Ecksm940" target="_blank" type="button" onclick="offDisplay()">CBS성경동화 85편 - 시험받으신 예수님</a></span>
+              </div>
+              <div class="listInner">
+                <span class="cbslist"><a href="https://youtu.be/cFSRvPRva5Y" target="_blank" type="button" onclick="offDisplay()">CBS성경동화 86편 - 가나에서의 결혼식</a></span>
+              </div>
+              <div class="listInner">
+                <span class="cbslist"><a href="https://youtu.be/Aos1HM_Ry60" target="_blank" type="button" onclick="offDisplay()">CBS성경동화 87편 - 사람을 낚는 어부와 생명의 물</a></span>
+              </div>
+              <div class="listInner">
+                <span class="cbslist"><a href="https://youtu.be/-C2GSs4cizI" target="_blank" type="button" onclick="offDisplay()">CBS성경동화 88편 - 예수님의 열두 제자</a></span>
+              </div>
+              <div class="listInner">
+                <span class="cbslist"><a href="https://youtu.be/AY9FIj6vMlo" target="_blank" type="button" onclick="offDisplay()">CBS성경동화 89편 - 놀라운 일들을 보여주신 예수님</a></span>
+              </div>
+              <div class="listInner">
+                <span class="cbslist"><a href="https://youtu.be/8I06PcSlVB4" target="_blank" type="button" onclick="offDisplay()">CBS성경동화 90편 - 용서의 말씀</a></span>
+              </div>
+              <div class="listInner">
+                <span class="cbslist"><a href="https://youtu.be/rdZIqrEffXA" target="_blank" type="button" onclick="offDisplay()">CBS성경동화 91편 - 마르다와 마리아, 그리고 다시 살아난 나사로</a></span>
+              </div>
+              <div class="listInner">
+                <span class="cbslist"><a href="https://youtu.be/Kh91bM3aYLk" target="_blank" type="button" onclick="offDisplay()">CBS성경동화 92편 - 나무위에 올라간 삭개오</a></span>
+              </div>
+              <div class="listInner">
+                <span class="cbslist"><a href="https://youtu.be/S-8xGGj0W6s" target="_blank" type="button" onclick="offDisplay()">CBS성경동화 93편 - 예루살렘에 입성하신 예수님</a></span>
+              </div>
+              <div class="listInner">
+                <span class="cbslist"><a href="https://youtu.be/rofaPR5in-8" target="_blank" type="button" onclick="offDisplay()">CBS성경동화 94편 - 예수님을 팔아 넘긴 가룟 유다</a></span>
+              </div>
+              <div class="listInner">
+                <span class="cbslist"><a href="https://youtu.be/JB90enGOXE8" target="_blank" type="button" onclick="offDisplay()">CBS성경동화 95편 - 최후의 만찬</a></span>
+              </div>
+              <div class="listInner">
+                <span class="cbslist"><a href="https://youtu.be/mUukQMOIMfo" target="_blank" type="button" onclick="offDisplay()">CBS성경동화 96편 - 예수님을 모른 체 한 베드로</a></span>
+              </div>
+              <div class="listInner">
+                <span class="cbslist"><a href="https://youtu.be/Vy1yoUVZnJM" target="_blank" type="button" onclick="offDisplay()">CBS성경동화 97편 - 빌라도의 재판</a></span>
+              </div>
+              <div class="listInner">
+                <span class="cbslist"><a href="https://youtu.be/oZc1PLzCdbk" target="_blank" type="button" onclick="offDisplay()">CBS성경동화 98편 - 십자가에 못박힌 예수님</a></span>
+              </div>
+              <div class="listInner">
+                <span class="cbslist"><a href="https://youtu.be/IH23-u2QF2Y" target="_blank" type="button" onclick="offDisplay()">CBS성경동화 99편 - 부활하신 예수님</a></span>
+              </div>
+              <div class="listInner">
+                <span class="cbslist"><a href="#" target="_blank" type="button" onclick="offDisplay()">CBS성경동화 100편 - </a></span>
+              </div>
+        </div>
+      </nav>
+</body>
+</html>
